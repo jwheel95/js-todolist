@@ -1,7 +1,11 @@
-.entry-form {
-  background-color: #5acee4;
-}
-
 div {
   text-align: center;
+}
+
+.entry-form {
+  background-color: #34b6ff;
+}
+
+.container-fluid {
+  padding: 0px;
 }
