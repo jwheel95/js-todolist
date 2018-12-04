@@ -1,11 +1,36 @@
-div {
-  text-align: center;
-}
-
-.entry-form {
-  background-color: #34b6ff;
-}
+@import url('https://fonts.googleapis.com/css?family=Bungee|Libre+Franklin');
 
 .container-fluid {
   padding: 0px;
+}
+
+.header{
+  background-color: #5cdb95;
+}
+
+.title {
+  text-align: center;
+  font-size: 88px;
+  font-family: 'Bungee', cursive;
+  color: #edf5e1;
+}
+
+.label-div {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 24px;
+  text-align: center;
+}
+
+.button-div {
+  text-align: center;
+  padding-bottom: 15px;
+}
+.lists {
+  padding-top: 25px;
+  text-align: center;
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+.list {
+  min-height: 300px;
 }

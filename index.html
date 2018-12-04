@@ -12,27 +12,26 @@
 </head>
 <body>
   <div class="container-fluid">
-    <div class="entry-form">
-      <form name="todoForm">
-        <div class="container">
-          <div class="row">
-            <label for="todo-item">What do you need to get done?</label>
-          </div>
-          <div class="row">
-            <input type="text" id="todo-item" name="todoItem"></input>
-          </div>
-          <div class="row">
-            <button class="btn" type="submit">Submit</button>
-          </div>
+    <div class="header">
+      <h1 class="title">DONEZO!</h1>
+      <form class="col-sm-4 offset-sm-4" name="todoForm">
+        <div class="label-div form-group">
+          <label for="todo-item">What do you need to get done?</label>
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="text" id="todo-item" name="todoItem"></input>
+        </div>
+        <div class="button-div form-group">
+          <button class="btn" type="submit">Add To List</button>
         </div>
       </form>
     </div>
-    <div class="row">
-      <div class="todo col-sm-6">
+    <div class="lists row">
+      <div class="list todo col-sm-6">
         <h2>To Do</h2>
         <ul></ul>
       </div>
-      <div class="done col-sm-6">
+      <div class="list done col-sm-6">
         <h2>Donezo!</h2>
         <ul></ul>
       </div>
