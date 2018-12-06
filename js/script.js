@@ -1,5 +1,8 @@
+//variables/queries
 const btn = document.querySelector('.btn');
+const TodoArr = [];
 
+// User submits item to Todo Array
 btn.addEventListener('click', e => {
   e.preventDefault();
 
