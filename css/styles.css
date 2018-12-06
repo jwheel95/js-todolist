@@ -9,15 +9,18 @@
 }
 
 .title {
+  position: relative;
   text-align: center;
-  font-size: 88px;
+  font-size: 6em;
   font-family: 'Bungee', cursive;
   color: #edf5e1;
+  animation-duration: 1s;
+  animation-name: titleLoad;
 }
 
 .label-div {
   font-family: 'Libre Franklin', sans-serif;
-  font-size: 24px;
+  font-size: 1.5em;
   text-align: center;
 }
 
@@ -33,4 +36,15 @@
 
 .list {
   min-height: 300px;
+}
+
+/* Animations */
+
+@keyframes titleLoad {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 0px;
+  }
 }
