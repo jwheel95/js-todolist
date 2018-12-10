@@ -25,13 +25,13 @@ function createList() {
     todoLi.classList.add('col-10', 'offset-1', 'list-item');
 
     const checkBox = document.createElement('i');
-    checkBox.classList.add('far', 'fa-square');
+    checkBox.classList.add('far', 'fa-square', 'glyphicon');
 
     const editBox = document.createElement('i')
-    editBox.classList.add('fas', 'fa-edit');
+    editBox.classList.add('fas', 'fa-edit', 'glyphicon');
 
     const deleteBox = document.createElement('i');
-    deleteBox.classList.add('fas', 'fa-minus-square');
+    deleteBox.classList.add('fas', 'fa-minus-square', 'glyphicon');
 
     todoLi.textContent = task;
     todoLi.append(checkBox, editBox, deleteBox);

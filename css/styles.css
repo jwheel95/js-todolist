@@ -62,10 +62,17 @@ ul {
 
 .fa-edit {
   float: right;
+  color: #5cdb95;
 }
 
 .fa-minus-square {
   float: right;
+  padding: 1px 10px 0px 0px;
+  color: red;
+}
+
+.glyphicon:hover {
+  cursor: pointer;
 }
 
 /* Animations */
