@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Bungee|Libre+Franklin');
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .container-fluid {
   padding: 0px;
 }
@@ -14,7 +19,7 @@
   font-size: 6em;
   font-family: 'Bungee', cursive;
   color: #edf5e1;
-  animation-duration: 1s;
+  animation-duration: 1.5s;
   animation-name: titleLoad;
 }
 
@@ -28,14 +33,39 @@
   text-align: center;
   padding-bottom: 10px;
 }
+
 .lists {
   padding-top: 25px;
   text-align: center;
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: 'Bungee', cursive;
 }
 
 .list {
   min-height: 300px;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+/* LIST ITEM STYLES */
+.list-item {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 1.5em;
+}
+
+.fa-square {
+  float: left;
+}
+
+.fa-edit {
+  float: right;
+}
+
+.fa-minus-square {
+  float: right;
 }
 
 /* Animations */
