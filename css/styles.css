@@ -5,18 +5,13 @@ body {
   padding: 0;
 }
 
-.container-fluid {
-  padding: 0px;
-}
-
 .header{
   background-color: #5cdb95;
+  text-align: center;
 }
 
 .title {
-  position: relative;
-  text-align: center;
-  font-size: 6em;
+  font-size: 4em;
   font-family: 'Bungee', cursive;
   color: #edf5e1;
   animation-duration: 1.5s;
@@ -35,7 +30,7 @@ body {
 }
 
 .lists {
-  padding-top: 25px;
+  padding: 25px 0px 0px 0px;
   text-align: center;
   font-family: 'Bungee', cursive;
 }
@@ -82,12 +77,18 @@ ul {
 }
 
 /* Animations */
-
 @keyframes titleLoad {
   from {
     top: -100px;
   }
   to {
     top: 0px;
+  }
+}
+
+/* Media Queries */
+@media only screen and (min-width: 768px) {
+  .title {
+    font-size: 6em;
   }
 }
