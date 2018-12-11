@@ -101,7 +101,7 @@ ul {
   h2 {
     font-size: 2em;
   }
-  list-item {
+  .list-item {
     font-size: 1.5em;
   }
 }

@@ -22,7 +22,7 @@ function createList() {
   todoUl.innerHTML = ''; //clears out existing list
   for (let task of todoArr) {
     const todoLi = document.createElement('li');
-    todoLi.classList.add('col-10', 'offset-1', 'list-item');
+    todoLi.classList.add('col-12', 'col-md-10', 'offset-md-1', 'list-item');
 
     const checkBox = document.createElement('i');
     checkBox.classList.add('far', 'fa-square', 'glyphicon');
@@ -53,7 +53,7 @@ function doneList() {
   doneUl.innerHTML = ''; //clears out existing list
   for(let task of donezoArr) {
     const doneLi = document.createElement('li');
-    doneLi.classList.add('col-10', 'offset-1', 'list-item', 'strike');
+    doneLi.classList.add('col-12', 'col-md-10', 'offset-md-1', 'list-item', 'strike');
 
     const checkedBox = document.createElement('i');
     checkedBox.classList.add('far', 'fa-check-square', 'glyphicon');
