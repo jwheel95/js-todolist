@@ -20,7 +20,7 @@ body {
 
 .label-div {
   font-family: 'Libre Franklin', sans-serif;
-  font-size: 1.5em;
+  font-size: 1em;
   text-align: center;
 }
 
@@ -32,6 +32,10 @@ body {
 .lists {
   padding: 25px 0px 0px 0px;
   text-align: center;
+}
+
+h2 {
+  font-size: 1.5em;
   font-family: 'Bungee', cursive;
 }
 
@@ -48,7 +52,7 @@ ul {
 /* LIST ITEM STYLES */
 .list-item {
   font-family: 'Libre Franklin', sans-serif;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 .fa-square, .fa-check-square {
@@ -90,5 +94,14 @@ ul {
 @media only screen and (min-width: 768px) {
   .title {
     font-size: 6em;
+  }
+  .label-div {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  list-item {
+    font-size: 1.5em;
   }
 }
