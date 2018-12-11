@@ -92,7 +92,7 @@ function checkTask(box) {
   setTimeout(markComplete, 800);
   function markComplete() {
     removeFromArr(todoArr, box.parentElement.textContent);
-    createList();
+    box.parentElement.parentElement.removeChild(box.parentElement);
     doneList();
   }
 }
@@ -106,8 +106,8 @@ function uncheckTask(box) {
   setTimeout(markIncomplete, 800);
   function markIncomplete() {
     removeFromArr(donezoArr, box.parentElement.textContent);
+    box.parentElement.parentElement.removeChild(box.parentElement);
     createList();
-    doneList();
   }
 }
 
