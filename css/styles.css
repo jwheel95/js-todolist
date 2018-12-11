@@ -56,8 +56,9 @@ ul {
   font-size: 1.5em;
 }
 
-.fa-square {
+.fa-square, .fa-check-square {
   float: left;
+  padding-top: 6px;
 }
 
 .fa-edit {
@@ -73,6 +74,11 @@ ul {
 
 .glyphicon:hover {
   cursor: pointer;
+}
+
+.strike {
+  text-decoration: line-through;
+  color: grey;
 }
 
 /* Animations */
