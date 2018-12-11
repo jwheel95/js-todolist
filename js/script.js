@@ -57,11 +57,14 @@ function doneList() {
 
     const checkedBox = document.createElement('i');
     checkedBox.classList.add('far', 'fa-check-square', 'glyphicon');
+    checkedBox.addEventListener('click', e => {
+      uncheckTask(e.target);
+    })
 
     const deleteBox = document.createElement('i');
     deleteBox.classList.add('fas', 'fa-minus-square', 'glyphicon');
     deleteBox.addEventListener('click', e => {
-      deleteTask(e.target);
+      deleteCompleteTask(e.target);
     })
 
     doneLi.textContent = task;
@@ -95,13 +98,31 @@ function checkTask(box) {
 }
 
 // Mark Incomplete function
+function uncheckTask(box) {
+  box.parentElement.classList.remove('strike');
+  box.classList.remove('fa-check-square');
+  box.classList.add('fa-square');
+  todoArr.push(box.parentElement.textContent);
+  setTimeout(markIncomplete, 800);
+  function markIncomplete() {
+    removeFromArr(donezoArr, box.parentElement.textContent);
+    createList();
+    doneList();
+  }
+}
 
 // Edit function
 function editTask() {
 
 }
 
-// Delete function
+// Delete functions
 function deleteTask(box) {
   box.parentElement.parentElement.removeChild(box.parentElement);
-}
+  removeFromArr(todoArr, box.parentElement.textContent);
+};
+
+function deleteCompleteTask(box) {
+  box.parentElement.parentElement.removeChild(box.parentElement);
+  removeFromArr(donezoArr, box.parentElement.textContent);
+};
