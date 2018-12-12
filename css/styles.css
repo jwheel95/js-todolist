@@ -40,7 +40,7 @@ h2 {
 }
 
 .list {
-  min-height: 300px;
+  min-height: 125px;
   margin: 0;
 }
 
@@ -53,6 +53,10 @@ ul {
 .list-item {
   font-family: 'Libre Franklin', sans-serif;
   font-size: 1em;
+}
+
+.todo-p {
+  display: inline;
 }
 
 .fa-square, .fa-check-square {
@@ -78,6 +82,18 @@ ul {
 .strike {
   text-decoration: line-through;
   color: grey;
+}
+
+.todo-input {
+  display: none;
+}
+
+li.edit-task p {
+  display: none;
+}
+
+li.edit-task input {
+  display: inline;
 }
 
 /* Animations */

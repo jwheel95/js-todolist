@@ -24,6 +24,14 @@ function createList() {
     const todoLi = document.createElement('li');
     todoLi.classList.add('col-12', 'col-md-10', 'offset-md-1', 'list-item');
 
+    const todoTask = document.createElement('p');
+    todoTask.classList.add('todo-p');
+    todoTask.textContent = task;
+
+    const todoEdit = document.createElement('input');
+    todoEdit.setAttribute('type', 'text');
+    todoEdit.classList.add('todo-input');
+
     const checkBox = document.createElement('i');
     checkBox.classList.add('far', 'fa-square', 'glyphicon');
     checkBox.addEventListener('click', e => {
@@ -42,8 +50,7 @@ function createList() {
       deleteTask(e.target);
     })
 
-    todoLi.textContent = task;
-    todoLi.append(checkBox, editBox, deleteBox);
+    todoLi.append(checkBox, todoTask, todoEdit, editBox, deleteBox);
     todoUl.appendChild(todoLi);
   }
 };
@@ -75,7 +82,7 @@ function doneList() {
 }
 
 //Function for removing items from Array
-const removeFromArr = (arr, item) => {
+function removeFromArr(arr, item) {
   for(let i = 0; i <= arr.length; i++) {
     if(arr[i] === item) {
       arr.splice(i, 1)
@@ -89,7 +96,7 @@ function checkTask(box) {
   box.classList.remove('fa-square');
   box.classList.add('fa-check-square');
   donezoArr.push(box.parentElement.textContent);
-  setTimeout(markComplete, 800);
+  setTimeout(markComplete, 500);
   function markComplete() {
     removeFromArr(todoArr, box.parentElement.textContent);
     box.parentElement.parentElement.removeChild(box.parentElement);
@@ -103,7 +110,7 @@ function uncheckTask(box) {
   box.classList.remove('fa-check-square');
   box.classList.add('fa-square');
   todoArr.push(box.parentElement.textContent);
-  setTimeout(markIncomplete, 800);
+  setTimeout(markIncomplete, 500);
   function markIncomplete() {
     removeFromArr(donezoArr, box.parentElement.textContent);
     box.parentElement.parentElement.removeChild(box.parentElement);
@@ -112,9 +119,22 @@ function uncheckTask(box) {
 }
 
 // Edit function
-function editTask() {
+function editTask(box) {
+  const listItem = box.parentElement;
 
-}
+  const itemContent = listItem.querySelector('p');
+  const itemEdit = listItem.querySelector('input');
+
+  if (listItem.classList.contains('edit-task')) {
+    itemContent.textContent = itemEdit.value;
+    todoArr.push(itemEdit.value);
+  } else {
+    itemEdit.value = itemContent.textContent;
+    removeFromArr(todoArr, itemContent.textContent);
+  }
+
+  listItem.classList.toggle('edit-task');
+};
 
 // Delete functions
 function deleteTask(box) {
