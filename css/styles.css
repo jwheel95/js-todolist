@@ -84,6 +84,8 @@ ul {
   color: grey;
 }
 
+/* Classes for Edit Functionality */
+
 .todo-input {
   display: none;
 }

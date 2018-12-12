@@ -125,15 +125,15 @@ function editTask(box) {
   const itemContent = listItem.querySelector('p');
   const itemEdit = listItem.querySelector('input');
 
-  if (listItem.classList.contains('edit-task')) {
+  if (listItem.classList.contains('edit-task')) { //if li is being edited
     itemContent.textContent = itemEdit.value;
-    todoArr.push(itemEdit.value);
+    todoArr.push(itemEdit.value); //add new value to Array
   } else {
     itemEdit.value = itemContent.textContent;
-    removeFromArr(todoArr, itemContent.textContent);
+    removeFromArr(todoArr, itemContent.textContent); //remove old value from array
   }
 
-  listItem.classList.toggle('edit-task');
+  listItem.classList.toggle('edit-task'); //toggles visibility of input/p
 };
 
 // Delete functions
